@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>video playlist</title>
+</head>
 <body>
-	<video width="320" height="240" controls>
-		source src="videolu.mp4" type="video/mp4">
-		maaf browser anda tidak mendukung tag video ini!
-	</video>
-	</body>
-</html>
-
+    <img src="x7.jpg" width="600" height="300">
+	<img src="x6.jpg" width="600" height="300">
 	
+
+</body>
+    <figure id="video_player">
+        <video controls width ="700px">
+            <source src="videolu.mp4" type="video/mp4">
+            <source src="video1.webm" type="video/webm">
+        
+        </video>
+        <figcaption>
+            <ul>
+                <li><a href="videolu.mp4"> play video 1</a></li>
+               
+            </ul>
+        </figcaption>
+    </figure>
+</body>
+    </html>
+
+
+<script type="text/javascript">
+    var video_player=document.getElementById("video_player"),
+    links=video_player.getElementByIdTagName('a');
+    for(var i=0; i<links.length; i++){
+        links[i].onclick handler;
+    }
+
+    function handler(e){
+        e.preventDefault();
+        videotarget=this.getAttribute("href");
+        filename=videotarget.subbstr(0,videotarget.lastIndexOf('.')||videotarget;
+        video=document.querySelector("#video_player video");
+        video.removeAttribute("poster");
+        source=document.querySelectorAll("#video_player video source");
+        source[0].src=filename + ".mp4";
+        source[1].src=filename + ".webm";
+        vide0.load();
+        video.play()
+
+    }
+
+    </script>
